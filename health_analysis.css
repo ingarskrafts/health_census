@@ -38,16 +38,21 @@ nav {
   
   h1 {
     margin-bottom: 20px;
+    margin-left: 10px;
   }
   
   div {
     margin-bottom: 10px;
   }
   
-  label {
+ /* label {
     display: inline-block;
     width: 100px;
+  } */
+  label {
+    margin-left: 10px;
   }
+
   
   input[type="text"],
   input[type="number"],
@@ -67,10 +72,15 @@ nav {
   button:hover {
     background-color: #45a049;
   }
+
+  #addPatient {
+    margin-left: 10px;
+  }
   
   /* Basic CSS for the report section */
   h2 {
     margin-top: 30px;
+    margin-left: 10px;
   }
   
   #report,#result {
