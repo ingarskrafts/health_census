@@ -38,9 +38,20 @@ function searchCondition() {
                 const prevention = condition.prevention.join(', ');
                 const tratment = condition.tratment;
 
-                
+                resultDiv.innerHTML += `<h2>${condition.name}</h2>`;
+                resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
+
+                resultDiv.innerHTML +=`<p><strong>Symptoms:</strong> ${symptoms}</p>`;
+                resultDiv.innerHTML +=`<p><strong>Prevention:</strong> ${prevention}</p>`;
+                resultDiv.innerHTML +=`<p><strong>Treatment:</strong> ${tratment}</p>`;
+            } else {
+                resultDiv.innerHTML = 'Condition not found';
             }
         })
+        .catch(error => {
+            console.error('Error:', error);
+            resultDiv.innerHTML = 'An error occurred while fetching data';
+        });
 }
 
 function generateReport() {
